@@ -1,0 +1,13 @@
+diff --git a/main.go b/main.go
+index e89fa75..a71b5a9 100644
+--- a/main.go
++++ b/main.go
+@@ -12,7 +12,7 @@ import (
+ 	"github.com/apex/log/handlers/json"
+ )
+ 
+-const pmp = "/usr/local/MacGPG2/libexec/pinentry-mac.app/Contents/MacOS/pinentry-mac"
++const pmp = "@pinentryMac@"
+ 
+ // File path to write debug info to, use
+ //
