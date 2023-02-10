@@ -32,20 +32,20 @@ pinentry-program /Users/<your user name>/.nix-profile/bin/pinentry-mac-keychain
 ```
 to your `~/.gnupg/gpg-agent.conf` file and restarted GPG agent via:
 ```
-gpgconf --kill all
+$ gpgconf --kill all
 ```
 
 ### Build from source
 
 ```
-go install .
+$ go install .
 ```
 
 ### Debug
 
 It can be built so it writes down logs into a file:
 ```
-go install -ldflags "-X main.logfile=$HOME/pinentry.log"
+$ go install -ldflags "-X main.logfile=$HOME/pinentry.log"
 ```
 
 ### TODO:
