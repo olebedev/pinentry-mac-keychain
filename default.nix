@@ -8,12 +8,11 @@ buildGoModule {
   name = "pinentry-mac-keychain";
   src = ./.;
   patches = [
-    (pkgs.substituteAll {
-      src = ./pinentry-mac-location.patch;
+    (pkgs.replaceVars ./pinentry-mac-location.patch {
       pinentryMac = "${pinentry_mac}/Applications/pinentry-mac.app/Contents/MacOS/pinentry-mac";
     })
   ];
-  vendorSha256 = "sha256-7UzdYGhi9asQRVb9EbaW0ijXf+lDnkM01Pv6yGsAghM=";
+  vendorHash = "sha256-7UzdYGhi9asQRVb9EbaW0ijXf+lDnkM01Pv6yGsAghM=";
 
   postInstall = ''
     echo "Add the following line to your ~/.gnupg/gpg-agent.conf file:"
